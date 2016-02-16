@@ -19,23 +19,35 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(19)
   });
 
-  it ("doesn't go below min temp", function() {
-    var i = thermostat.temperature - thermostat._min_temp;
-
-    while(i--) {
-      thermostat.decreaseTemp()
-    }
-    expect(function() {
-      thermostat.decreaseTemp();}).toThrowError(TypeError, "Can't go below " + thermostat._min_temp);
+  it ("resets the temperature", function(){
+    thermostat.decreaseTemp()
+    thermostat.decreaseTemp()
+    thermostat.resetTemp()
+    expect(thermostat.temperature).toEqual(thermostat.DEFAULT_TEMP)
   });
 
-  it ("doesn't go above max temp", function() {
-    var i = thermostat.temperature - thermostat._min_temp;
+  describe("Errors", function(){
 
-    while(i--) {
-      thermostat.decreaseTemp()
-    }
-    expect(function() {
-      thermostat.decreaseTemp();}).toThrowError(TypeError, "Can't go below " + thermostat._min_temp);
+    it ("doesn't go below min temp", function() {
+      var i = thermostat.DEFAULT_TEMP - thermostat._minTemp;
+
+      while(i--) {
+        thermostat.decreaseTemp()
+      }
+      expect(function() {
+        thermostat.decreaseTemp();}).toThrowError(TypeError, "Can't go below " + thermostat._minTemp);
+    });
+
+    it ("doesn't go above max temp", function() {
+
+      for (i = thermostat.DEFAULT_TEMP; i < thermostat._maxTemp; i ++){
+        thermostat.increaseTemp();
+      };
+      console.log(thermostat.temperature);
+      expect(function() {
+        thermostat.increaseTemp();}).toThrowError(TypeError, "Can't go above " + thermostat._maxTemp);
+    });
   });
+
+
 });
