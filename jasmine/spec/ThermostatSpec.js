@@ -7,6 +7,7 @@ describe("Thermostat", function() {
 
   it ("starts at 20 degrees", function(){
     expect(thermostat.temperature).toEqual(20);
+    expect(thermostat.screenColor).toEqual('yellow');
   });
 
   it ("increases the temperature", function(){
@@ -16,7 +17,11 @@ describe("Thermostat", function() {
 
   it ("decreases the temperature", function(){
     thermostat.decreaseTemp();
-    expect(thermostat.temperature).toEqual(19);
+    thermostat.decreaseTemp();
+    thermostat.decreaseTemp();
+    expect(thermostat.temperature).toEqual(17);
+    console.log(thermostat.temperature)
+    expect(thermostat.screenColor).toEqual('green');
   });
 
   it ("resets the temperature", function(){
@@ -36,6 +41,14 @@ describe("Thermostat", function() {
     expect(thermostat._maxTemp).toEqual(25)
   });
 
+  it ("above 25 degrees returns red screen color", function(){
+
+    for (i = thermostat.DEFAULT_TEMP; i < (thermostat._maxTemp) ; i ++){
+      thermostat.increaseTemp();
+    };
+    expect(thermostat.screenColor).toEqual('red');
+
+  });
   describe("Errors", function(){
 
     it ("doesn't go below min temp", function() {
