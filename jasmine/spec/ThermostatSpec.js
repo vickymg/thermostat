@@ -27,8 +27,10 @@ describe("Thermostat", function() {
   it ("resets the temperature", function(){
     thermostat.decreaseTemp();
     thermostat.decreaseTemp();
+    thermostat.savingModeOff();
     thermostat.resetTemp();
     expect(thermostat.temperature).toEqual(thermostat.DEFAULT_TEMP)
+    expect(thermostat._maxTemp).toEqual(25)
   });
 
   it ("power saving off changes max temperature", function(){
@@ -70,6 +72,4 @@ describe("Thermostat", function() {
         thermostat.increaseTemp();}).toThrowError(TypeError, "Can't go above " + thermostat._maxTemp);
     });
   });
-
-
 });

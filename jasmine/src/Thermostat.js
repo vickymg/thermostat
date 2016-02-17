@@ -14,6 +14,7 @@ function Thermostat() {
 
 Thermostat.prototype.resetTemp = function(){
   this.temperature = this.DEFAULT_TEMP;
+  this.savingModeOn();
 }
 
 Thermostat.prototype.increaseTemp = function() {
@@ -55,11 +56,11 @@ Thermostat.prototype.determineMaxTemp = function(){
 
 Thermostat.prototype.determineColor = function(){
   if(this.temperature < tempRange.low) {
-    return "green"; 
-  } 
+    return "green";
+  }
   else if(this.temperature < tempRange.medium) {
     return "yellow";
-  } 
+  }
   else {
     return "red";
   }

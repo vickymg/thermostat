@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    body{background-color: #2c2e38}
+    a.test {
+  	color: #d7ceb2;
+  	text-shadow: 3px 3px 0px #2c2e38, 5px 5px 0px #5c5f72;
+  	font: 80px 'BazarMedium';
+  	letter-spacing: 10px;
+    text-decoration: none;
+  }
+
+   .link {
+     font-size: 30px;
+     color: green;
+   }
+
+   #star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right:  100px solid transparent;
+    border-bottom: 70px  solid red;
+    border-left:   100px solid transparent;
+    -moz-transform:    rotate(35deg) scale(.5);
+    -webkit-transform: rotate(35deg) scale(.5);
+    -ms-transform:     rotate(35deg) scale(.5);
+    -o-transform:      rotate(35deg) scale(.5);
+ }
+ #star-five:before {
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+
+ }
+ #star-five:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+    content: '';
+ }
+
+
+
+  </style>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+<body>
+
+    <span class="star-five" width="10" hight="10"></span>
+
+    <a class= "link" href="http://jquery.com/">jQuery</a>
+    <!-- <a class= "link" href="http://jquery.com/">jQuery</a>
+    <a class= "link" href="http://jquery.com/">jQuery</a> -->
+    <!-- <form action= "http://jquery.com/"><input type="submit" value="jquery"></form> -->
+
+
+
+
+    <script src="src/jquery.js"></script>
+
+    <script>
+
+    $( document ).ready(function() {
+      $( "a" ).addClass( "test" );
+        $( "a" ).click(function( event ) {
+            event.preventDefault();
+          $( "a" ).removeClass( "test" );
+          $ ( this ).fadeOut(2000);
+        });
+
+
+
+
+    });
+
+
+
+
+    </script>
+</body>
+</html>
