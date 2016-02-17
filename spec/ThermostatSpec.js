@@ -37,6 +37,34 @@ describe('Thermostat', function() {
     expect(thermostat.powerSaving).toBeTruthy();
   });
 
+  it('can turn on power saving mode', function() {
+    thermostat.switchPowerSaving();
+    thermostat.switchPowerSaving();
+    expect(thermostat.powerSaving).toEqual(true);
+    expect(thermostat.maximumTemperature).toEqual(25);
+  });
+
+  it('can reset the temperature to 20', function() {
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20);
+  });
+
+
+  describe('energy usage', function() {
+
+    it('has a default energy usage of yellow', function() {
+      expect(thermostat.currentEnergyUsage).toEqual('yellow');
+    });
+
+    it('sets the colour to green when the temperature is below 18', function() {
+      for(var i = 20; i >= 18; i--) {
+        thermostat.decreaseTemperature();
+      }
+      expect(thermostat.currentEnergyUsage).toEqual('green');
+    });
+
+  });
+
 
   describe('in power saving mode', function() {
 
@@ -53,7 +81,7 @@ describe('Thermostat', function() {
     });
 
     it('can turn off power saving mode', function() {
-      thermostat.turnOffPowerSaving();
+      thermostat.switchPowerSaving();
       expect(thermostat.powerSaving).toEqual(false);
       expect(thermostat.maximumTemperature).toEqual(32);
     });
