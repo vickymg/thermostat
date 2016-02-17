@@ -3,7 +3,8 @@ function Thermostat() {
   this.powerSaving = true;
   this.maximumTemperature = 25
   this.minimumTemperature = 10;
-  this.currentEnergyUsage = 'yellow'
+  this.currentEnergyUsage = "yellow"
+
 };
 
 Thermostat.prototype.increaseTemperature = function() {
@@ -11,6 +12,7 @@ Thermostat.prototype.increaseTemperature = function() {
     throw new Error("Cannot increase above 25 degrees!")
   }
   this.temperature += 1;
+  this._energyUsage();
 };
 
 Thermostat.prototype.decreaseTemperature = function () {
@@ -38,5 +40,9 @@ Thermostat.prototype.reset = function () {
 Thermostat.prototype._energyUsage = function() {
   if (this.temperature < 18) {
     this.currentEnergyUsage = 'green';
+  } else if(this.temperature > 25){
+    this.currentEnergyUsage = 'red';
+  } else {
+    this.currentEnergyUsage = 'yellow';
   };
 };

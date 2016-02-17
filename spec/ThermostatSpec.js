@@ -63,6 +63,13 @@ describe('Thermostat', function() {
       expect(thermostat.currentEnergyUsage).toEqual('green');
     });
 
+    it('sets the colour to red when the temperature is above 25', function() {
+      thermostat.switchPowerSaving();
+      for(var i = 20; i <= 25; i++) {
+        thermostat.increaseTemperature();
+      }
+      expect(thermostat.currentEnergyUsage).toEqual('red');
+    });
   });
 
 
