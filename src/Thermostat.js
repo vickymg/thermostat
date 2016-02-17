@@ -1,8 +1,8 @@
 function Thermostat() {
   this.temperature = 20;
-  this.maximumTemperature = 25;
-  this.minimumTemperature = 10;
   this.powerSaving = true;
+  this.maximumTemperature = 25
+  this.minimumTemperature = 10;
 };
 
 Thermostat.prototype.increaseTemperature = function() {
@@ -17,4 +17,9 @@ Thermostat.prototype.decreaseTemperature = function () {
     throw new Error("Cannot decrease below 10 degrees!");
   }
     this.temperature -= 1;
+};
+
+Thermostat.prototype.turnOffPowerSaving = function() {
+  this.powerSaving = false;
+  this.maximumTemperature = 32;
 };
