@@ -1,5 +1,8 @@
 function Thermostat() {
-  this.temperature = 20;
+  this.DEFAULT_TEMP = 20;
+  this.MEDIUM_USAGE_LIMIT = 25;
+  this.LOW_USAGE_LIMIT = 18;
+  this.temperature = this.DEFAULT_TEMP;
   this.powerSaving = true;
   this.maximumTemperature = 25
   this.minimumTemperature = 10;
@@ -34,13 +37,13 @@ Thermostat.prototype.switchPowerSaving = function() {
 };
 
 Thermostat.prototype.reset = function () {
-  this.temperature = 20;
+  this.temperature = this.DEFAULT_TEMP;
 };
 
 Thermostat.prototype._energyUsage = function() {
-  if (this.temperature < 18) {
+  if (this.temperature < this.LOW_USAGE_LIMIT) {
     this.currentEnergyUsage = 'green';
-  } else if(this.temperature > 25){
+  } else if(this.temperature > this.MEDIUM_USAGE_LIMIT){
     this.currentEnergyUsage = 'red';
   } else {
     this.currentEnergyUsage = 'yellow';
