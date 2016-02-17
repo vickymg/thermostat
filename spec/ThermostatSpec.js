@@ -33,4 +33,24 @@ describe('Thermostat', function() {
     expect(thermostat.minimumTemperature).toEqual(10);
   });
 
+  it('is in power saving mode by default', function() {
+    expect(thermostat.powerSaving).toBeTruthy();
+  });
+
+  describe('in power saving mode', function() {
+
+    it('has a maximum temperature of 25', function() {
+      expect(thermostat.maximumTemperature).toEqual(25);
+    });
+
+    it('cannot increase temperature above 25', function() {
+      for(var i = 20; i < 25 ; i++) {
+        thermostat.increaseTemperature();
+      }
+      expect(function(){thermostat.increaseTemperature();} ).toThrowError("Cannot increase above 25 degrees!")
+      expect(thermostat.temperature).toEqual(25);
+    });
+
+  });
+
 });
