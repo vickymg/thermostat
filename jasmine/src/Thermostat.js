@@ -4,8 +4,8 @@ function Thermostat() {
   this.DEFAULT_TEMP = 20;
   this.temperature = this.DEFAULT_TEMP
   this._minTemp = 10;
-  this._maxTemp = 25;
-  // this.savingMode = true;
+  this.savingMode = true;
+  this._maxTemp = this.determineMaxTemp();
 };
 
 Thermostat.prototype.resetTemp = function(){
@@ -27,6 +27,20 @@ Thermostat.prototype.decreaseTemp = function() {
   this.temperature -= 1
 }
 
-// Thermostat.prototype.savingModeOff = function() {
-//   this.savingMode = false;
-// }
+Thermostat.prototype.savingModeOff = function() {
+  this.savingMode = false;
+  this.determineMaxTemp();
+}
+
+Thermostat.prototype.savingModeOn = function() {
+  this.savingMode = true;
+  this.determineMaxTemp();
+}
+
+Thermostat.prototype.determineMaxTemp = function(){
+  if(this.savingMode === true) {
+    return this._maxTemp = 25;
+  } else {
+    return this._maxTemp = 32;
+   }
+}
