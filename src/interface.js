@@ -1,9 +1,16 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
-  $('#temperature').text(thermostat.temperature);
+  updateTemperature();
 
   function updateTemperature() {
   $('#temperature').text(thermostat.temperature);
+    if(thermostat.currentEnergyUsage === 'yellow') {
+      $('#temperature').css("background-color", "yellow");
+    } else if(thermostat.currentEnergyUsage === 'red') {
+      $('#temperature').css("background-color", "red")
+    } else {
+      $('#temperature').css("background-color", "green")
+    }
   }
 
   $('#temperature-up').on('click', function() {
