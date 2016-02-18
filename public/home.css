@@ -53,6 +53,7 @@ html, body {
   font-size: 120px;
   width: 35%;
   float: right;
+  text-align: right;
 }
 
 button {
@@ -61,6 +62,7 @@ button {
   padding: 10px;
   border: none;
   background: none;
+  outline: 0;
 }
 
 .plus {
@@ -73,6 +75,21 @@ button {
   position: absolute;
   top: 172px;
   left: 130px;
+}
+
+.reset {
+  position: absolute;
+  top: 400px;
+  left: 50px;
+  font-size: 50px;
+}
+
+.psm {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  font-size: 50px;
+  color: green;
 }
 
 #footer {

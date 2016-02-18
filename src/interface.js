@@ -9,7 +9,7 @@ $(document).ready(function() {
     } else if(thermostat.currentEnergyUsage === 'red') {
       $('#temperature').css("color", "red")
     } else {
-      $('#temperature').css("color", "green")
+      $('#temperature').css("color", "blue")
     }
   }
 
@@ -45,11 +45,11 @@ $(document).ready(function() {
   $('#switch-power-saving').on('click', function() {
     if(thermostat.powerSaving === true) {
       thermostat.switchPowerSaving();
-      $('#power-saving-status').text('off');
+      $('#switch-power-saving').css("color", "red");
     }
     else {
       thermostat.switchPowerSaving();
-      $('#power-saving-status').text('on');
+      $('#switch-power-saving').css("color", "green");
     }
   })
 

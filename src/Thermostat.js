@@ -11,7 +11,7 @@ function Thermostat() {
 };
 
 Thermostat.prototype.increaseTemperature = function() {
-  if(this.temperature === this.maximumTemperature) {
+  if(this.temperature >= this.maximumTemperature) {
     throw new Error("Cannot increase above 25 degrees!")
   }
   this.temperature += 1;
