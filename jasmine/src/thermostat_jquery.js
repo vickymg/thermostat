@@ -7,7 +7,6 @@ $( document ).ready(function() {
 
     	var thermostat = new Thermostat();
     	displayTemp();
-    	
 
       $( "#up-arrow" ).click(function( event ) {
         thermostat.increaseTemp();
