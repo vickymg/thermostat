@@ -60,12 +60,12 @@ Thermostat.prototype.determineMaxTemp = function(){
 
 Thermostat.prototype.determineColor = function(){
   if(this.temperature < this.tempRange.low) {
-    return "green";
+    return "low";
   }
   else if(this.temperature < this.tempRange.medium) {
-    return "yellow";
+    return "medium";
   }
   else {
-    return "red";
+    return "high";
   }
 }
