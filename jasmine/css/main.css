@@ -11,8 +11,34 @@ body{
   text-decoration: none;
 }
 
-.powersavebutton {
-  background-color: #4D6938; /* Green */
+ #thermostat_body {
+  width: 700px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #473D3B;
+  border-radius: 25px;
+ }
+
+#screen {
+  margin-top: 40px;
+  width: 400px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #7A7574;
+  border-radius: 25px;
+}
+
+#buttons {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.control_button {
+  background-color: #4D6938;
   border: none;
   color: #d7ceb2;
   padding: 15px 32px;
@@ -24,10 +50,9 @@ body{
 }
 
 .reset-button {
-  background-color: #5C1B0C; /* Green */
+  background-color: #5C1B0C;
   border: none;
   color: #d7ceb2;
-  /*padding: 15px 32px;*/
   text-align: center;
   text-decoration: none;
   width: 100%
@@ -46,35 +71,3 @@ body{
 	font: 80px 'BlackJackRegular';
 }
 
-.round-button {
-    width:5%;
-}
-.round-button-circle {
-    width: 100%;
-    height:0;
-    padding-bottom: 100%;
-   border-radius: 50%;
-    border:2px solid #BA962B ;
-   overflow:hidden;
-
-   background: #5C1A06 ;
-   box-shadow: 0 0 3px gray;
-}
-.round-button-circle:hover {
-    background:#30588e ;
-}
-.round-button a {
-   display:block;
-    float:left;
-    width:100%;
-    padding-top:50%;
-   padding-bottom:50%;
-    line-height:1em;
-    margin-top:-0.5em;
-
-    text-align:center;
-    color:#e2eaf3 ;
-   font-family:Verdana;
-   font-size:0.6em;
-   text-decoration:none;
-}
