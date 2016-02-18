@@ -39,7 +39,7 @@ html, body {
   padding: 25px;
   color: white;
   text-align: right;
-  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-family: AppleGothic, sans-serif;
 }
 
 #sidebar-a {
@@ -50,7 +50,7 @@ html, body {
 }
 
 .vert-text {
-  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-family:  AppleGothic, sans-serif;
   /*text-align: right;*/
   font-size: 70px;
 
@@ -64,14 +64,14 @@ html, body {
 }
 
 .temp {
-  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-family: AppleGothic, sans-serif;
   font-size: 120px;
   float: right;
   text-align: right;
 }
 
 button {
-  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-family: AppleGothic, sans-serif;
   font-size: 100px;
   padding: 10px;
   border: none;
