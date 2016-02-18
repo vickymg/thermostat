@@ -61,6 +61,7 @@ Thermostat.prototype.determineMaxTemp = function(){
 
 Thermostat.prototype.determineColor = function(){
   if(this.temperature < this.tempRange.low) {
+<<<<<<< HEAD
     return "#6BD12C";
   }
   else if(this.temperature < this.tempRange.medium) {
@@ -68,5 +69,14 @@ Thermostat.prototype.determineColor = function(){
   }
   else {
     return "#D13C2C";
+=======
+    return "low";
+  }
+  else if(this.temperature < this.tempRange.medium) {
+    return "medium";
+  }
+  else {
+    return "high";
+>>>>>>> 934c1b2c8c54146e600342045f4f2f9040f1628e
   }
 }
