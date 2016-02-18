@@ -18,16 +18,18 @@
         <button class="plus" id="temperature-up">+</button>
         <button class="psm" id="switch-power-saving">PSM</button>
         <button class="reset" id="temperature-reset">reset</button>
-        <div>
+      </div>
+        <div id="citytemp">
           <p>Check the weather in your city...</p>
           <form id="city-search">
-            <input id="city" type="text" placeholder="input city">
-            <input type="submit" value="Search">
+            <input class="search" id="city" type="text" placeholder="Search for your city...">
           </form>
-          Temperature in <span id="cityname"></span>:
-          <span id="current-temperature"></span>
         </div>
-      </div>
+        <div id="temp-is">
+        Temperature in
+        <span id="cityname"></span>:
+        <span id="current-temperature"></span> &#x2103;
+        </div>
       <div id="footer">Footer</div>
     </div>
 
