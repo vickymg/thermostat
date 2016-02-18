@@ -1,0 +1,83 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+#page-container {
+    width: auto;
+    margin: auto;
+}
+
+#header {
+  background: black;
+  height: 100px;
+}
+
+#title-bar {
+  margin: 0;
+  padding: 25px;
+  color: white;
+  text-align: right;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+#sidebar-a {
+  float: right;
+  width: 280px;
+  background: white;
+  height: 400px;
+}
+
+.vert-text {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  /*text-align: right;*/
+  font-size: 70px;
+
+	transform: rotate(90deg) translateY(95px) translateX(120px);
+}
+
+#content {
+  background: white;
+  margin-right: 280px;
+  height: 400px;
+}
+
+.temp {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 120px;
+  width: 35%;
+  float: right;
+}
+
+button {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 100px;
+  padding: 10px;
+  border: none;
+  background: none;
+}
+
+.plus {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+}
+
+.minus {
+  position: absolute;
+  top: 172px;
+  left: 130px;
+}
+
+#footer {
+  background: black;
+  height: 50px;
+  clear: both;
+
+}

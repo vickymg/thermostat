@@ -5,27 +5,46 @@
     <link rel="stylesheet" type="text/css" href="public/home.css">
   </head>
   <body>
-    <section>
-      <h1 id="temperature"></h1>
+    <div id="page-container">
+      <div id="header">
+        <h1 id='title-bar'> thermostat </h1>
+      </div>
+      <div id="sidebar-a">
+        <h1 class='vert-text'> degrees </h1>
+      </div>
+      <div id="content">
+        <h1 class="temp" id="temperature"></h1>
+        <button class="plus" id="temperature-up">+</button>
+        <button class="minus" id="temperature-down">-</button>
+      </div>
+      <div id="footer">Footer</div>
+
+    </div>
+
+
+    <!-- <section>
+        <h1 id="temperature"></h1>
       <p>
         <section>
           <form id="city-search">
             <input id="city" type="text" placeholder="input city">
             <input type="submit" value="Search">
-          </form>
-          <div>
+          </form> -->
+
+          <!-- <div>
             Temperature in
             <h1 id="cityname"></h1>:
-            <span id="current-temperature"><span>
-          </div>
-        </section>
+            <span id="current-temperature"></span>
+          </div> -->
+
+        <!-- </section>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
         <button id="temperature-reset">reset</button>
         power saving mode is <span id="power-saving-status">on</span>
         <button id="switch-power-saving">PSM on/off</button>
       </p>
-    </section>
+    </section> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="src/Thermostat.js"></script>
     <script src="src/interface.js"></script>

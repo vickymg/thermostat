@@ -5,11 +5,11 @@ $(document).ready(function() {
   function updateTemperature() {
   $('#temperature').text(thermostat.temperature);
     if(thermostat.currentEnergyUsage === 'yellow') {
-      $('#temperature').css("background-color", "yellow");
+      $('#temperature').css("color", "black");
     } else if(thermostat.currentEnergyUsage === 'red') {
-      $('#temperature').css("background-color", "red")
+      $('#temperature').css("color", "red")
     } else {
-      $('#temperature').css("background-color", "green")
+      $('#temperature').css("color", "green")
     }
   }
 
