@@ -2,6 +2,7 @@
 
 function Thermostat() {
   this.maxTempHash = {savingOff:32, savingOn:25}
+  this.colorCode={}
   this.tempRange= {high: 32, medium: 25, low: 18}
   this.DEFAULT_TEMP = 20;
   this.temperature = this.DEFAULT_TEMP
