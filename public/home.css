@@ -65,6 +65,11 @@ button {
   outline: 0;
 }
 
+button:active {
+  vertical-align: top;
+  padding: 8px 13px 6px;
+}
+
 .plus {
   position: absolute;
   top: 180px;
