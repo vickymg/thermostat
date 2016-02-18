@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Thermostat of awesomeness
+    </title>
+    <link href="css/main.css" rel="stylesheet" media="all">
+      <script src="src/Thermostat.js"></script>
+          <script src="src/jquery.js"></script>
+  </head>
+
+  <body>
+
+    <h2 class="headding" >Thermostat</h2>
+    	<div id="thermostat_body">
+    		<div id="screen">
+    		    <h1 id="temperature"></h1>
+    		</div>
+    		<div id= "buttons">
+    			<ul>
+		        <li><button class="control_button" id="up-arrow" type="submit" value="up">UP!</button></li>
+		        <li><button class="control_button"id="down-arrow" type="submit" value="down">DOWN!</button></li>
+		        <li><button class="control_button" id="reset-temp" type="submit" value="resetTemp">RESET</button></li>
+		        <li><button class="control_button" id="power-saving" type="submit" value="savingOn">Power Saving is On</button></li>
+		        <li><div id="notification"></div></li>
+		       </ul>
+	       </div>
+	     </div>
+
+    <script>
+
+    $( document ).ready(function() {
+
+    	function displayTemp() {
+    		$('#temperature').text(thermostat.temperature);
+    	}
+
+    	var thermostat = new Thermostat();
+    	displayTemp();
+
+      $( "#up-arrow" ).click(function( event ) {
+        thermostat.increaseTemp();
+        displayTemp();
+      });
+
+      $( "#down-arrow" ).click(function( event ) {
+        thermostat.decreaseTemp();
+        displayTemp();
+      });
+
+      $( "#reset-temp" ).click(function( event ) {
+        thermostat.resetTemp();
+        displayTemp();
+      });
+
+      $( "#power-saving" ).click(function( event ) {
+        thermostat.savingModeOff();
+        displayTemp();
+      });
+
+
+      function turnPSOn() {
+      	thermostat.savingModeOn();
+      	$('#power-saving').text('Power Saving is On');
+      	displayTemp();
+      	$(this).one("click", turnPSOff);
+      };
+
+      function turnPSOff() {
+      	thermostat.savingModeOff();
+      	$('#power-saving').text('Power Saving is Off');
+      	displayTemp();
+      	$(this).one("click", turnPSOn);
+      };
+
+      $('#power-saving').one("click", turnPSOff);
+
+    });
+
+    </script>
+
+  </body>
+</html>
