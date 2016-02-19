@@ -116,7 +116,7 @@ button:focus {
  }
 
 #buttons {
-  margin-top: 20px;
+  margin-top: 15px;
   margin-left: 50px;
   margin-right: 10px;
   float: left;
@@ -140,7 +140,7 @@ button:focus {
 }
 
 #reset-temp, #power-saving {
-  padding: 10px 30px;
+  padding: 10px 24px;
 }
 
 .headding {
@@ -170,11 +170,13 @@ button:focus {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  box-shadow: 1px 5px 8px #402804;
+  box-shadow: 1px 5px 8px #402804,
+              inset 2px 2px 5px #99655A;
   font-family: 'Unica One', cursive;
 }
 
 .control_button:active{
-  box-shadow: 1px 3px 8px #402804;
+  box-shadow: 1px 3px 8px #402804,
+        inset 1px 1px 4px #99655A;
   transform: translateY(1px);
 }
