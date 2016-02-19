@@ -1,5 +1,5 @@
 body{
-  background-color: #a9514f;
+  background-color: #41786A;
 }
 
 h1 {
@@ -52,16 +52,18 @@ button:focus {
   background-color: #631303;
   border: 2px solid #7b723b;
   border-radius: 25px;
+  -moz-box-shadow:    inset 0 0 60px #3B0F06;
+  -webkit-box-shadow: inset 0 0 60px #3B0F06;
+  box-shadow:         inset 0 0 60px #3B0F06;
  }
 
  #temperature {
   text-align: center;
   font-family: 'Unica One', cursive;
-
  }
 
  #screens{
-  width:560px; 
+  width:560px;
   margin-left: 100px;
   margin-right: 50px;
   }
@@ -74,7 +76,10 @@ button:focus {
   border: 3px solid #7b723b;
   box-shadow: 2px 2px 5px #402804;
   border-radius: 25px;
-  float:left; 
+  float:left;
+  -moz-box-shadow:    inset 0 0 50px #000000;
+  -webkit-box-shadow: inset 0 0 50px #000000;
+  box-shadow:         inset 0 0 50px #000000;
 }
 
  #outdoor-temp{
@@ -87,6 +92,9 @@ button:focus {
   box-shadow: 2px 2px 5px #402804;
   border-radius: 15px;
   font-family: 'Unica One', cursive;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
  }
 
  .cold-temp{
@@ -104,7 +112,7 @@ button:focus {
  #api-temp {
   font-size: 40px;
   text-align: center;
-  margin-top: 20px; 
+  margin-top: 20px;
  }
 
 #buttons {
@@ -138,7 +146,16 @@ button:focus {
 .headding {
   text-align: center;
   color: #e0c99f;
-  text-shadow: 2px 3px 0px #433a31, 3px 5px 0px #a9514f;
+  text-shadow: 2px 3px 0px #433a31, 3px 5px 0px #264A41;
+  font: 'BazarMedium';
+  letter-spacing: 10px;
+  text-decoration: none;
+}
+
+.small-headding {
+  text-align: center;
+  color: #e0c99f;
+  text-shadow: 2px 2px 0px #433a31, 3px 3px 0px #264A41;
   font: 'BazarMedium';
   letter-spacing: 10px;
   text-decoration: none;

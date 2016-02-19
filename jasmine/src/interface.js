@@ -8,7 +8,7 @@ $( document ).ready(function() {
     	var thermostat = new Thermostat();
     	displayTemp();
 
-      $.get("http://api.openweathermap.org/data/2.5/weather?q=mumbai&APPID=b7c5477d0a1d7e7fc8feed92153db903&units=metric", function(result){
+      $.get("http://api.openweathermap.org/data/2.5/weather?q=glasgow&APPID=b7c5477d0a1d7e7fc8feed92153db903&units=metric", function(result){
         var temp = Math.round(result.main.temp)
         $('#api-temp').text(temp);
         if (temp >= 25){
@@ -57,4 +57,14 @@ $( document ).ready(function() {
 
       $('#power-saving').one("click", turnPSOff);
 
-    });
+      function pulsate() {
+        var pulser = $(".pulsate");
+        pulser.animate({opacity: 0.7}, 700, 'linear')
+        .animate({opacity: 1}, 1200, 'linear', pulsate);
+      }
+
+      $(document).ready(function() {
+          pulsate();
+      });
+
+  });
