@@ -143,6 +143,23 @@ button:focus {
   padding: 10px 24px;
 }
 
+/*#power-saving-notification {
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+}*/
+
+.power-saving-on {
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+  color: #402804;
+}
+
+.power-saving-off {
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+  color: #E63712;
+}
+
 .headding {
   text-align: center;
   color: #e0c99f;

@@ -43,14 +43,14 @@ $( document ).ready(function() {
 
       function turnPSOn() {
       	thermostat.savingModeOn();
-      	$('#power-saving').text('Power Saving is On');
+      	$('#power-saving-notification').removeClass('power-saving-off');
       	displayTemp();
       	$(this).one("click", turnPSOff);
       };
 
       function turnPSOff() {
       	thermostat.savingModeOff();
-      	$('#power-saving').text('Power Saving is Off');
+        $('#power-saving-notification').addClass('power-saving-off');
       	displayTemp();
       	$(this).one("click", turnPSOn);
       };
