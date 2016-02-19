@@ -12,7 +12,7 @@ h2 {
 }
 
 h4 {
-  margin-left: 200px;
+  text-align: center;
   color: #73612D;
   font-family: 'Great Vibes', cursive;
   text-shadow: 1px 2px 1px #e0c99f, 2px 5px 1px #402804;
@@ -23,11 +23,11 @@ h4 {
 
 h5 {
   color: #73612D;
-  font-family: 'Cookie', cursive;
-  text-shadow: 1.5px 1px 0px #e0c99f, 2px 4px 0.5px #402804;
+  font-family: 'Unica One', cursive;
+  text-shadow: 1px 1px 0px #e0c99f, 2px 4px 0.5px #402804;
   margin-top: 0px;
   margin-bottom: 10px;
-  font-size: 35px;
+  font-size: 25px;
   float: right;
 }
 
@@ -121,6 +121,7 @@ button:focus {
   border-radius: 50px;
   display: inline-block;
   margin-left: 10px;
+  box-shadow: 2px 1px 5px #a9514f;
 }
 
 .headding {
@@ -141,7 +142,8 @@ button:focus {
   border-radius: 25px;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   box-shadow: 2px 2px 5px #402804;
+  font-family: 'Unica One', cursive;
 }
 
