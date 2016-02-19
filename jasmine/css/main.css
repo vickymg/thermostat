@@ -15,10 +15,10 @@ h4 {
   text-align: center;
   color: #73612D;
   font-family: 'Great Vibes', cursive;
-  text-shadow: 1px 2px 1px #e0c99f, 2px 5px 1px #402804;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 40px;
+  text-shadow: 1px 1.5px 1px #e0c99f, 2px 5px 1px #402804;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  font-size: 35px;
 }
 
 h5 {
@@ -56,7 +56,8 @@ button:focus {
 
  #temperature {
   text-align: center;
-  padding-top: 15px;
+  font-family: 'Unica One', cursive;
+
  }
 
  #screens{
@@ -85,6 +86,7 @@ button:focus {
   border: 3px solid #7b723b;
   box-shadow: 2px 2px 5px #402804;
   border-radius: 15px;
+  font-family: 'Unica One', cursive;
  }
 
  .cold-temp{
@@ -124,6 +126,15 @@ button:focus {
   box-shadow: 2px 1px 5px #a9514f;
 }
 
+#up-arrow, #down-arrow{
+  font-size: 30px;
+  padding: 5px 15px;
+}
+
+#reset-temp, #power-saving {
+  padding: 10px 30px;
+}
+
 .headding {
   text-align: center;
   color: #e0c99f;
@@ -137,13 +148,16 @@ button:focus {
   background-color: #470D01;
   border: 2px solid #b2a160;
   color: #b2a160;
-  padding: 15px 32px;
   text-align: center;
   border-radius: 25px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  box-shadow: 2px 2px 5px #402804;
+  box-shadow: 1px 5px 8px #402804;
   font-family: 'Unica One', cursive;
 }
 
+.control_button:active{
+  box-shadow: 1px 3px 8px #402804;
+  transform: translateY(1px);
+}
