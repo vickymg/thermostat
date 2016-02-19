@@ -2,10 +2,12 @@
 <html>
   <head>
     <title>Thermostat of awesomeness</title>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link href="css/main.css" rel="stylesheet" media="all">
     <script src="src/Thermostat.js"></script>
     <script src="src/jquery.js"></script>
-    <script src="src/thermostat_jquery.js"></script>
+    <script src="src/interface.js"></script>
   </head>
 
   <body>
@@ -13,9 +15,18 @@
   <h2 class="headding" >THE NEW AND IMPROVED</h2>
     <h1 class="headding">Thermostat 500</h1>
     	<div id="thermostat_body">
-    		<div id="screen">
-    		    <h1 id="temperature"></h1>
-    		</div>
+          <h4>Thermostat 500</h4>
+        <div id="screens">
+      		<div id="main-temp-screen">
+      		    <h1 id="temperature"></h1>
+      		</div>
+          <div>
+            <h5>The Outdoors</h5>
+            <div id="outdoor-temp">
+                <p id="api-temp"></p>
+            </div>
+          </div>
+        </div>
     		<div id= "buttons">
     			<ul>
     				<li><button class="control_button" id="reset-temp" type="submit" value="resetTemp">RESET</button></li>

@@ -11,43 +11,105 @@ h2 {
   padding-top: 30px;
 }
 
+h4 {
+  margin-left: 200px;
+  color: #73612D;
+  font-family: 'Great Vibes', cursive;
+  text-shadow: 1px 2px 1px #e0c99f, 2px 5px 1px #402804;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+h5 {
+  color: #73612D;
+  font-family: 'Cookie', cursive;
+  text-shadow: 1.5px 1px 0px #e0c99f, 2px 4px 0.5px #402804;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 35px;
+  float: right;
+}
 
 ul {
   list-style: none;
 }
 
 li {
-    display: inline;
+  display: inline;
+  margin-left: 10px;
 }
 
-.headding {
-  text-align: center;
-  color: #e0c99f;
-  text-shadow: 2px 3px 0px #433a31, 3px 5px 0px #a9514f;
-  font: 'BazarMedium';
-  letter-spacing: 10px;
-  text-decoration: none;
+button:focus {
+   outline:0;
 }
 
  #thermostat_body {
   width: 700px;
-  height: 400px;
+  height: 430px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #443b34;
+  background-color: #631303;
   border: 2px solid #7b723b;
   border-radius: 25px;
  }
 
-#screen {
+ #temperature {
+  text-align: center;
+  padding-top: 15px;
+ }
+
+ #screens{
+  width:560px; 
+  margin-left: 100px;
+  margin-right: 50px;
+  }
+
+#main-temp-screen {
   width: 400px;
   height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
+  display: inline-block;
   background-color: #e0c99f;
-  border: 2px solid #e0c99f;
+  border: 3px solid #7b723b;
+  box-shadow: 2px 2px 5px #402804;
   border-radius: 25px;
+  float:left; 
+}
+
+ #outdoor-temp{
+  margin-bottom: 40px;
+  margin-left: 30px;
+  width: 110px;
+  height: 80px;
+  display: inline-block;
+  border: 3px solid #7b723b;
+  box-shadow: 2px 2px 5px #402804;
+  border-radius: 15px;
+ }
+
+ .cold-temp{
+  background-color: #8FBEBF;
+ }
+
+ .warm-temp{
+  background-color: #BF968F;
+ }
+
+.regular-temp{
+  background-color: #e0c99f;
+}
+
+ #api-temp {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px; 
+ }
+
+#buttons {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 10px;
+  float: left;
 }
 
 #notification {
@@ -61,22 +123,17 @@ li {
   margin-left: 10px;
 }
 
- #temperature {
+.headding {
   text-align: center;
-  padding-top: 15px;
- }
-
-
-#buttons {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width:530px;
+  color: #e0c99f;
+  text-shadow: 2px 3px 0px #433a31, 3px 5px 0px #a9514f;
+  font: 'BazarMedium';
+  letter-spacing: 10px;
+  text-decoration: none;
 }
 
-
 .control_button {
-  background-color: #443c31;
+  background-color: #470D01;
   border: 2px solid #b2a160;
   color: #b2a160;
   padding: 15px 32px;
@@ -85,5 +142,6 @@ li {
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
+  box-shadow: 2px 2px 5px #402804;
 }
 
